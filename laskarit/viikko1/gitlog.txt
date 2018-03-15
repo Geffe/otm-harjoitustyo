@@ -1,0 +1,107 @@
+commit 658dbf92f3839b45f2553c73456237e516da7026
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 20:37:45 2018 +0200
+
+    muutoksia taas
+
+ tiedostoja/file1  | 0
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 43f661b6b968fa8193029f2f50e9ce2b985d0726
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 20:30:04 2018 +0200
+
+    lisää tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6c14706e743c07c629027219e2d220f9249deaf9
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 20:15:45 2018 +0200
+
+    lisäätekstiä ja poistoja
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit dbd35f39fd1ce16b952bb7a6dffc0fd1abf2996b
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 20:08:38 2018 +0200
+
+    uudelleen nimentä
+
+ eka.txt      | 1 +
+ tiedosto.txt | 1 -
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+commit 3629268dcfa4c92c603543c417585e36997fb513
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 20:03:14 2018 +0200
+
+    tiedoston poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 7591f04024c37f8cb0d8e3fdf7392a043523e951
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 19:55:03 2018 +0200
+
+    pois ja lisää
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 71f8c8ac87e444d46f71cc84ca2129910b69703d
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 19:52:10 2018 +0200
+
+    tekstiää
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3c9c5862fc0a02bb0fb9c2b3908dc087138469f3
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 19:38:32 2018 +0200
+
+    muutoksia tiedostoihin
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 30e9be414de412af63e17edc586b16b812fff40e
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 19:35:54 2018 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 30545c615e1857adcb6ad1e3bd82f5db2d3fdd67
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 12:12:34 2018 +0200
+
+    muutosja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 3ea33e9a674453de84b2af24b6e9b7795bb21dab
+Author: geffe <millalinnea.keranen@gmail.com>
+Date:   Thu Mar 15 12:07:20 2018 +0200
+
+    tiedosto.txt luoto
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
