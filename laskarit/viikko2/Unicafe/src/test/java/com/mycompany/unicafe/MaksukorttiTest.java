@@ -7,7 +7,6 @@ import org.junit.Test;
 public class MaksukorttiTest {
 
     Maksukortti kortti;
-    Kassapaate kassapaate;
 
     @Before
     public void setUp() {
@@ -32,9 +31,20 @@ public class MaksukorttiTest {
     
     @Test
     public void saldoVäheneeOikein(){
+        kortti.otaRahaa(5);
+        assertEquals(5,kortti.saldo());
+    }
+    
+    @Test
+    public void saldoEiVähene(){
+        kortti.otaRahaa(11);
+        assertEquals(10,kortti.saldo());
+    }
+    
+    @Test
+    public void TrueFalseVäheneeOikein(){
         assertTrue(kortti.otaRahaa(5));
-        
-        kortti.otaRahaa(10);
-        assertEquals("saldo: 0.00",kortti.toString());
+        assertTrue(kortti.otaRahaa(5));
+        assertFalse(kortti.otaRahaa(1));
     }
 }
