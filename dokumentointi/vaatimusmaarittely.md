@@ -6,6 +6,7 @@ Ainakin alussa sovelluksella on vain yhdenlaisia käyttäjiä ilman käyttäjät
 ## Käyttöliittymäluonnos
 Sovelluksen yksinkertaisin versio sisältää kaksi näkymää. 
 <img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/photo5890981627595697395(1).jpg" width="750">
+
 Sovelluksen ensimmäisessä näkymässä on iso tekstikenttä, johon voi liittää DNA-sekvenssin. Sen alapuolella on lista restriktioentsyymeistä, joista voi valita haluamansa. Viimeisenä nappi, josta pääsee seuraavaan näkymään eli tulokseen. Tuloksessa eri entsyymien kohdat näkyvät eri väreillä, jotta niitä voi vartailla helposti. Samassa näkymässä tuloksen yläpuolella näkyy vielä edellinen näkymä, jotta tulosta voi halutessaan vielä muokata eli lisätä tai vähentää haettuja entsyymejä. Tuloksen alapuolella on vielä nappi, josta tuloksen voi kopioida koneelle.
 ## Perusversion tarjoama toiminnallisuus
 - Käyttäjä voi liittää sovellukseen DNA-sekvenssin tiedostona tai tekstinä
