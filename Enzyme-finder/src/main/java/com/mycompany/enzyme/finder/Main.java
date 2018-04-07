@@ -14,11 +14,11 @@ public class Main {
         
         enzymes.setEnzyme(new Enzyme("EcoRI", "GAATTC"));
         enzymes.setEnzyme(new Enzyme("BamHI", "GGATCC"));
-        
+                
         
         Scanner lukija = new Scanner(System.in);
         System.out.println("Syötä sekvenssi: ");
-        String sekvenssi = "AGCTGGATCCTAGCAT";
+        Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGAT");
         
         System.out.println("Entsyymit: ");
         System.out.println(enzymes);
@@ -42,21 +42,26 @@ public class Main {
             }
         }
         
-        String muokattuSekvenssi = "";
+        Sequence output = new Sequence();
+        SequenceSplitter splitter = new SequenceSplitter(enzymes);
+        splitter.split(input.getSequence());
         
-        int sekvenssinPituus = sekvenssi.length();
+        int sekvenssinPituus = input.getSequence().length();
         int ekaIndeksi = 0;
-        int vikaIndeksi = 5;
+        int vikaIndeksi = 6;
         
-        while(vikaIndeksi < sekvenssinPituus){
-            String subString = sekvenssi.substring(ekaIndeksi, vikaIndeksi);
-            
+        while(vikaIndeksi <= sekvenssinPituus){
+            String subString = input.getSequence().substring(ekaIndeksi, vikaIndeksi);
+            System.out.println(subString);
             if(valitut.searchSequence(subString)){
-                System.out.println("löytyy");
+                output.editSequence("_");
+            //output.editSequence(input.getSequence().charAt(ekaIndeksi));
             }
+            
             ekaIndeksi++;
             vikaIndeksi++;
-        }    
+        }   
+        System.out.println(output.getSequence());
     }
     
 }

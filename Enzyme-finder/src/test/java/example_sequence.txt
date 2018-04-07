@@ -1,1 +1,6 @@
-
+# hastag indicates comment
+# This sequence holds 
+#   - 3x GAATTC
+#   - 1x GGATCC
+# Tested with regexp: ((GGATCC)|(GAATTC))
+ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGAT
