@@ -7,10 +7,11 @@ import java.util.ArrayList;
 public class EnzymeList {
     
     private ArrayList<Enzyme> enzymes;
+    private int amount;
     
     public EnzymeList(){
         this.enzymes = new ArrayList();
-        
+        this.amount = 0;
     }
     
     @Override
@@ -23,10 +24,12 @@ public class EnzymeList {
 
     public void setEnzymes(ArrayList<Enzyme> enzymes) {
         this.enzymes = enzymes;
+        amount += enzymes.size();
     }
     
-    public void setEnzyme(Enzyme enzyme) {
+    public void addEnzyme(Enzyme enzyme) {
         this.enzymes.add(enzyme);
+        this.amount += 1;
     }
 
     public ArrayList<Enzyme> getEnzymes() {
@@ -57,8 +60,11 @@ public class EnzymeList {
                 return enzymes.get(i);
             }
         }
-        return new Enzyme("a","a");
-        //huono, tiedän
+        return null;
+    }
+    
+    public int amount(){
+        return this.amount;
     }
 
     

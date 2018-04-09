@@ -1,5 +1,6 @@
 
 package com.mycompany.enzyme.finder;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,9 +13,24 @@ public class SequenceSplitter {
         3. splittaa annettu sequence
     */
     final String regex;
+    final ArrayList<Enzyme> list;
     
     public SequenceSplitter(EnzymeList list){
-        this.regex = "(GGATCC)|(GAATTC)";
+//        this.regex = "(GGATCC)|(GAATTC)";
+
+        
+        this.list = list.getEnzymes();
+        this.regex = this.regexBuilder();
+    }
+    public String regexBuilder(){
+        String string= "";
+        for(int i=0;i<list.size();i++){
+            string += "(" + list.get(i).getSequence() + ")";
+            if(!(i+1==list.size())){
+                string += "|";
+            }
+        }
+        return string;
     }
     
     public void split(String string){
