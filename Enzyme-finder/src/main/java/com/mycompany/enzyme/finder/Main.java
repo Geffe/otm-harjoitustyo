@@ -44,26 +44,15 @@ public class Main {
             }
         }
         
-        Sequence output = new Sequence();
-        SequenceSplitter splitter = new SequenceSplitter(valitut);
-        splitter.split(input.getSequence());
         
-//        int sekvenssinPituus = input.getSequence().length();
-//        int ekaIndeksi = 0;
-//        int vikaIndeksi = 6;
-//        
-//        while(vikaIndeksi <= sekvenssinPituus){
-//            String subString = input.getSequence().substring(ekaIndeksi, vikaIndeksi);
-//            System.out.println(subString);
-//            if(valitut.searchSequence(subString)){
-//                output.editSequence("_");
-//            //output.editSequence(input.getSequence().charAt(ekaIndeksi));
-//            }
-//            
-//            ekaIndeksi++;
-//            vikaIndeksi++;
-//        }   
-        System.out.println(output.getSequence());
+        System.out.println(input.getSequence());
+        SequenceSplitter splitter = new SequenceSplitter(valitut);
+        splitter.setSequence(input.getSequence());
+        splitter.split(input.getSequence());
+        splitter.editSequence();
+        
+  
+        
     }
     
 }

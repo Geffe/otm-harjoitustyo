@@ -59,6 +59,9 @@ public class EnzymeList {
             if(enzymes.get(i).getName().equals(syote)){
                 return enzymes.get(i);
             }
+            if(enzymes.get(i).getSequence().equals(syote)){
+                return enzymes.get(i);
+            }
         }
         return null;
     }
