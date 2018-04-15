@@ -3,10 +3,7 @@
 import com.mycompany.enzyme.finder.Enzyme;
 import com.mycompany.enzyme.finder.EnzymeList;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -56,14 +53,14 @@ public class EnzymeListTest {
         assertEquals(2, list.amount());
     }
     
-    @Test
-    public void getEnzymes(){
-        ArrayList<Enzyme> enzymes = new ArrayList();
-        enzymes.add(new Enzyme("BamHI","GGATCC"));
-        enzymes.add(new Enzyme("EcoRI", "GAATTC"));
-        
-        assertEquals(enzymes, getEnzymes());
-    }
+//    @Test
+//    public void getEnzymes(){
+//        ArrayList<Enzyme> enzymes = new ArrayList();
+//        enzymes.add(new Enzyme("BamHI","GGATCC"));
+//        enzymes.add(new Enzyme("EcoRI", "GAATTC"));
+//        
+//        assertEquals(enzymes, getEnzymes());
+//    }
     
     @Test
     public void searchNameToimii(){

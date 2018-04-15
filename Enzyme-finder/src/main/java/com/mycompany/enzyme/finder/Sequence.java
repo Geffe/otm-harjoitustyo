@@ -22,7 +22,7 @@ public class Sequence {
         this.sequence = sequence;
     }
     
-    public void editSequence(String sequence){
+    public void editSequence(String sequence) {
         this.sequence += sequence;
     }
     

@@ -7,7 +7,7 @@ public class Enzyme {
     private String name;
     private String sequence;
     
-    public Enzyme(String name, String sequence){
+    public Enzyme(String name, String sequence) {
         this.name = name;
         this.sequence = sequence;
     }
