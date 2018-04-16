@@ -7,6 +7,8 @@
 
 [Työaikakirjanpito](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
+[Testikattavuusraportti](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/testikattavuusraportti16.4.png)
+
 
 
 
