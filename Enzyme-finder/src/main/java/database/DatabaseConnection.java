@@ -1,4 +1,4 @@
-package com.mycompany.enzyme.finder;
+package database;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;

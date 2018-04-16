@@ -1,5 +1,10 @@
-package com.mycompany.enzyme.finder;
+package main;
 
+import database.DatabaseConnection;
+import com.mycompany.enzyme.finder.Enzyme;
+import com.mycompany.enzyme.finder.EnzymeList;
+import com.mycompany.enzyme.finder.Sequence;
+import com.mycompany.enzyme.finder.SequenceSplitter;
 import java.util.Scanner;
 
 
