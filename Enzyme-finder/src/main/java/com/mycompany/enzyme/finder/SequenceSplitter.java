@@ -20,7 +20,7 @@ public class SequenceSplitter {
 
 //        this.list = list.getEnzymes();
         this.list = list;
-        this.regex = this.regexBuilder();
+        this.regex = regexBuilder();
         this.sequence = "";
     } 
 
@@ -59,6 +59,10 @@ public class SequenceSplitter {
 
     public void setSequence(String sequence) {
         this.sequence = sequence;
+    }
+    
+    public String getSequence(){
+        return this.sequence;
     }
 
     public void editSequence() {

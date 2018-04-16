@@ -53,19 +53,27 @@ public class EnzymeListTest {
         assertEquals(2, list.amount());
     }
     
-//    @Test
-//    public void getEnzymes(){
-//        ArrayList<Enzyme> enzymes = new ArrayList();
-//        enzymes.add(new Enzyme("BamHI","GGATCC"));
-//        enzymes.add(new Enzyme("EcoRI", "GAATTC"));
-//        
-//        assertEquals(enzymes, getEnzymes());
-//    }
+    @Test
+    public void getEnzymes(){
+        ArrayList<Enzyme> enzymes = new ArrayList();
+        enzymes.add(new Enzyme("BamHI","GGATCC"));
+        enzymes.add(new Enzyme("EcoRI", "GAATTC"));
+        list.setEnzymes(enzymes);
+        
+        assertEquals(enzymes, list.getEnzymes());
+    }
     
     @Test
     public void searchNameToimii(){
         list.addEnzyme(new Enzyme("BamHI","GGATCC"));
         assertTrue(list.searchName("BamHI"));
         assertFalse(list.searchName(""));
+    }
+    
+    @Test
+    public void searchSequenceWorks(){
+        list.addEnzyme(new Enzyme("BamHI","GGATCC"));
+        assertTrue(list.searchSequence("GGATCC"));
+        assertFalse(list.searchSequence(""));
     }
 }

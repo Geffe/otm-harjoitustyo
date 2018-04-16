@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) { 
         //Alun kokeilua, ohjelman rakentamisen helpottamiseksi
         //monet muuttuvat syötteet on asetettu oletetuiksi.
+        
         DatabaseConnection foobar = new DatabaseConnection();
         foobar.createNewDatabase("test2.db");
         EnzymeList enzymes = new EnzymeList();
