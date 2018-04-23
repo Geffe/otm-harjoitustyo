@@ -13,17 +13,20 @@ public class App {
     
     public void run(){
         DatabaseConnection foobar = new DatabaseConnection();
+        EnzymeList enzymes = foobar.getEnzymesFromXML();
+        System.out.println(enzymes.toString());
+        System.out.println("tidiii");
         
-        foobar.createNewDatabase("test2.db");
-        EnzymeList enzymes = new EnzymeList();
+//        foobar.createNewDatabase("test2.db");
+//        EnzymeList enzymes = new EnzymeList();
 
-        enzymes.addEnzyme(new Enzyme("EcoRI", "GAATTC"));
-        enzymes.addEnzyme(new Enzyme("BamHI", "GGATCC"));
+//        enzymes.addEnzyme(new Enzyme("EcoRI", "GAATTC"));
+//        enzymes.addEnzyme(new Enzyme("BamHI", "GGATCC"));
 
         Scanner lukija = new Scanner(System.in);
         System.out.println("Syötä sekvenssi: ");
-        Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGAT");
-        //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI- 
+        Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
+        //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
 
         System.out.println("Entsyymit: ");
         System.out.println(enzymes);

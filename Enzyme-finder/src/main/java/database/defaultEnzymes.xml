@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+These are default enzymes for splitting enzymes
+-->
+<Enzymes>
+    <Enzyme name="EcoRI">GAATTC</Enzyme>
+    <Enzyme name="ApaLI">GTGCAC</Enzyme>
+    <Enzyme name="BamHI">GGATCC</Enzyme>
+    <Enzyme name="HindIII">AAGCTT</Enzyme>
+    <Enzyme name="EcoRI">GAATTC</Enzyme>
+    <Enzyme name="NarI">GGCGCC</Enzyme>
+    
+</Enzymes>
