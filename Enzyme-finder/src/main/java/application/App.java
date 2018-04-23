@@ -23,14 +23,31 @@ public class App {
 //        enzymes.addEnzyme(new Enzyme("EcoRI", "GAATTC"));
 //        enzymes.addEnzyme(new Enzyme("BamHI", "GGATCC"));
 
+        Sequence input = getSequence();
+        System.out.println("Entsyymit: ");
+        System.out.println(enzymes);
+
+        EnzymeList valitut = getSplittingEnzymes(enzymes);
+
+        System.out.println(input.getSequence());
+        SequenceSplitter splitter = new SequenceSplitter(valitut);
+        splitter.setSequence(input.getSequence());
+        String splitted_text = splitter.split(input.getSequence());
+        printResult(splitted_text);
+        splitter.editSequence();
+    }
+
+    private Sequence getSequence() {
         Scanner lukija = new Scanner(System.in);
         System.out.println("Syötä sekvenssi: ");
         Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
         //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
+        return input;
 
-        System.out.println("Entsyymit: ");
-        System.out.println(enzymes);
+    }
 
+    private EnzymeList getSplittingEnzymes(EnzymeList enzymes) {
+        Scanner lukija = new Scanner(System.in);
         EnzymeList valitut = new EnzymeList();
 
         while (true) {
@@ -49,11 +66,10 @@ public class App {
                 System.out.println("Käytä parempia arvoja tyhmä!");
             }
         }
+        return valitut;
+    }
 
-        System.out.println(input.getSequence());
-        SequenceSplitter splitter = new SequenceSplitter(valitut);
-        splitter.setSequence(input.getSequence());
-        splitter.split(input.getSequence());
-        splitter.editSequence();
+    private void printResult(String splitted_text) {
+        System.out.println(splitted_text);
     }
 }

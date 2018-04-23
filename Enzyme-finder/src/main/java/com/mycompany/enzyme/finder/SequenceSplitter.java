@@ -35,7 +35,7 @@ public class SequenceSplitter {
         return string;
     }
 
-    public void split(String string) {
+    public String split(String string) {
 
         final Pattern pattern = Pattern.compile(regex);
         final Matcher matcher = pattern.matcher(string);
@@ -53,7 +53,8 @@ public class SequenceSplitter {
             this.sequence = this.sequence.replaceAll(matcher.group(),
                     "**" + list.getEnzyme(matcher.group()).getName() + "**");
         }
-        System.out.println(this.sequence);
+        // System.out.println(this.sequence);
+        return this.sequence;
 
     }
 
