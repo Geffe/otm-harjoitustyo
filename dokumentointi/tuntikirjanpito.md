@@ -10,3 +10,5 @@
 | 15.4. | 2    | Checkstyle.xml ja sovelluksen suunnittelua |
 | 16.4. | 2    | Databasen kokeilua ja tutkimista |
 | 17.4. | 2    | Lisää testiluokkia, testikattavuusraportti ja alustava luokkakaavio |
+| 23.4. | 6    | Tietokannan/XML-tiedoston tekoa ja liittämistä sovellukseen, graafisen käyttöliittymän harjoittelua |
+| yht   | 26   |
