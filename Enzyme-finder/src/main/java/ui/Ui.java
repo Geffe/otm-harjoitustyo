@@ -1,19 +1,19 @@
 
-package application;
+package ui;
+
 
 import com.mycompany.enzyme.finder.EnzymeList;
 import com.mycompany.enzyme.finder.Sequence;
 import java.util.Scanner;
 
-
 public class Ui {
-    
+
     private Scanner lukija;
-    
-    public Ui(Scanner lukija){
-        this.lukija= lukija;
+
+    public Ui(Scanner lukija) {
+        this.lukija = lukija;
     }
-    
+
     public Sequence getSequence() {
         //sekvenssi on asetettu vielä valmiiksi kokeilun helpottamiseksi
         System.out.println("Syötä sekvenssi: ");
@@ -23,14 +23,14 @@ public class Ui {
         return input;
 
     }
-    
-    public void listEnzymes(EnzymeList list){
+
+    public void listEnzymes(EnzymeList list) {
         System.out.println("Entsyymit: ");
         System.out.println(list);
     }
-    
+
     public EnzymeList getSplittingEnzymes(EnzymeList enzymes) {
-        
+
         EnzymeList valitut = new EnzymeList();
 
         while (true) {
@@ -52,9 +52,9 @@ public class Ui {
         }
         return valitut;
     }
-    
+
     public void printResult(String text) {
         System.out.println(text);
     }
-    
+
 }

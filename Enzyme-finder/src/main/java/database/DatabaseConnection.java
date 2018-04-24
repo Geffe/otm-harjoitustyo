@@ -1,4 +1,5 @@
 package database;
+
 import com.mycompany.enzyme.finder.Enzyme;
 import com.mycompany.enzyme.finder.EnzymeList;
 import java.io.File;
@@ -22,19 +23,19 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
- 
+
 /**
  *
  * @author sqlitetutorial.net
  */
 public class DatabaseConnection {
-    
+
     private String url;
-    
-    public DatabaseConnection(){
+
+    public DatabaseConnection() {
         this.url = null;
     }
- 
+
     /**
      * Connect to a sample database
      *
@@ -68,7 +69,6 @@ public class DatabaseConnection {
 //            System.out.println(e.getMessage());
 //        }
 //    }
-    
     public EnzymeList getEnzymesFromXML() {
         try {
             File file = new File("src/main/java/database/defaultEnzymes.xml");
@@ -78,13 +78,13 @@ public class DatabaseConnection {
                     .newDocumentBuilder();
             Document document = documentBuilder.parse(file);
             NodeList enzymes = document.getElementsByTagName("Enzyme");
-            
+
             EnzymeList list = new EnzymeList();
 
             for (int i = 0; i < enzymes.getLength(); i++) {
-                
+
                 String enzyme_text = enzymes.item(i).getTextContent();
-                Element fstElmnt = (Element)enzymes.item(i);
+                Element fstElmnt = (Element) enzymes.item(i);
                 String enzyme_name = fstElmnt.getAttribute("name");
                 Enzyme enzyme = new Enzyme(enzyme_name, enzyme_text);
 //                System.out.println(enzyme.toString());
@@ -92,16 +92,16 @@ public class DatabaseConnection {
 //                System.out.println(enzyme_name);
                 list.addEnzyme(enzyme);
             }
-            
+
             return list;
-            
-        } catch (ParserConfigurationException | SAXException | IOException e) {           
+
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
-        
+
         return null;
     }
-    
+
 //    public void setDefaultEnzymes(){
 //        try (Connection conn = DriverManager.getConnection(url)) {
 //            System.out.println("luotu yhteys");
@@ -121,6 +121,4 @@ public class DatabaseConnection {
 //            System.out.println(e.getMessage());
 //        }
 //    }
- 
-
 }

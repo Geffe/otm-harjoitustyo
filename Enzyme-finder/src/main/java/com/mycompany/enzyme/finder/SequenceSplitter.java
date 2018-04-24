@@ -22,7 +22,7 @@ public class SequenceSplitter {
         this.list = list;
         this.regex = regexBuilder();
         this.sequence = "";
-    } 
+    }
 
     public String regexBuilder() {
         String string = "";
@@ -61,8 +61,8 @@ public class SequenceSplitter {
     public void setSequence(String sequence) {
         this.sequence = sequence;
     }
-    
-    public String getSequence(){
+
+    public String getSequence() {
         return this.sequence;
     }
 

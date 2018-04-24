@@ -5,9 +5,5 @@
     "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
 
 <suppressions>
-    <suppress files="com.mycompany.enzyme.finder.Enzyme.java" checks="[a-zA-Z0-9]*"/>
-    <suppress files="com.mycompany.enzyme.finder.EnzymeList.java" checks="[a-zA-Z0-9]*"/>
-    <suppress files="com.mycompany.enzyme.finder.Main.java" checks="[a-zA-Z0-9]*"/>
-    <suppress files="com.mycompany.enzyme.finder.Sequence.java" checks="[a-zA-Z0-9]*"/>
-    <suppress files="com.mycompany.enzyme.finder.SequenceSplitter.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="ui.Ui.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>
