@@ -69,7 +69,7 @@ public class DatabaseConnection {
 //            System.out.println(e.getMessage());
 //        }
 //    }
-    public Document getDocument(String filepath){
+    public Document getDocument(String filepath) {
         try {
             File file = new File(filepath);
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
@@ -77,19 +77,19 @@ public class DatabaseConnection {
             DocumentBuilder documentBuilder = documentBuilderFactory
                     .newDocumentBuilder();
             Document document = documentBuilder.parse(file);
-            
-            
+
             return document;
-            
+
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
-        
+
         return null;
-        
+
     }
+
     public EnzymeList getEnzymesFromXML() {
-        
+
         Document document = getDocument("src/main/java/database/defaultEnzymes.xml");
         NodeList enzymes = document.getElementsByTagName("Enzyme");
 
@@ -106,7 +106,7 @@ public class DatabaseConnection {
 //                System.out.println(enzyme_name);
             list.addEnzyme(enzyme);
         }
-        
+
         return list;
 
     }

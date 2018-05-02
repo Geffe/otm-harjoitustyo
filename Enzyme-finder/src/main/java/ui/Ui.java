@@ -17,13 +17,14 @@ public class Ui {
     public Sequence getSequence() {
         String syote;
         //sekvenssi on asetettu vielä valmiiksi kokeilun helpottamiseksi
-        System.out.println("Syötä sekvenssi tai tiedostopolku [SEKVENSSI/TIEDOSTO]");
+        System.out.println("Syötä sekvenssi tai tiedostopolku");
         syote = this.lukija.nextLine();
         Sequence input = new Sequence();
 
+        //tiedoston luku keskeneräinen, sekvenssin luku onnistuu
         while (true) {
             // Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
-
+            //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
             if (input.fromFile(syote)) {
                 System.out.println(input.getSequence());
                 return input;
@@ -31,11 +32,11 @@ public class Ui {
                 System.out.println(input.getSequence());
                 return input;
             } else {
-                System.out.println("Anna parepi inputti!");
+                System.out.println("Anna parempi sy!");
                 syote = this.lukija.nextLine();
 
             }
-                    //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
+                   
         
         }
     }
