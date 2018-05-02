@@ -12,4 +12,6 @@
 | 17.4. | 2    | Lisää testiluokkia, testikattavuusraportti ja alustava luokkakaavio |
 | 23.4. | 6    | Tietokannan/XML-tiedoston tekoa ja liittämistä sovellukseen, graafisen käyttöliittymän harjoittelua |
 | 24.4. | 2    | Käyttöliittymän eriyttämistä, testikattavuusraportti, checkstyle ja README.md päivitys | 
-| yht   | 28   |
+| 29.4. | 1    | Tiedoston/sekvenssin luku |
+| 2.5.  | 1    | Vähän koodin putsaamista ja checkstyle |
+| yht   | 30   |
