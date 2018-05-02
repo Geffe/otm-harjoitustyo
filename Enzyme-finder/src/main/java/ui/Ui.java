@@ -15,13 +15,29 @@ public class Ui {
     }
 
     public Sequence getSequence() {
+        String syote;
         //sekvenssi on asetettu vielä valmiiksi kokeilun helpottamiseksi
-        System.out.println("Syötä sekvenssi: ");
-        Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
-        //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
-        System.out.println(input.getSequence());
-        return input;
+        System.out.println("Syötä sekvenssi tai tiedostopolku [SEKVENSSI/TIEDOSTO]");
+        syote = this.lukija.nextLine();
+        Sequence input = new Sequence();
 
+        while (true) {
+            // Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
+
+            if (input.fromFile(syote)) {
+                System.out.println(input.getSequence());
+                return input;
+            } else if (input.fromString(syote)) {
+                System.out.println(input.getSequence());
+                return input;
+            } else {
+                System.out.println("Anna parepi inputti!");
+                syote = this.lukija.nextLine();
+
+            }
+                    //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
+        
+        }
     }
 
     public void listEnzymes(EnzymeList list) {

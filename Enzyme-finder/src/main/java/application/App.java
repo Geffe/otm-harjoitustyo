@@ -29,7 +29,7 @@ public class App {
         splitter.setSequence(input.getSequence());
         String splitted_text = splitter.split(input.getSequence());
         ui.printResult(splitted_text);
-        splitter.editSequence();
+//        splitter.editSequence();
     }
 
 }

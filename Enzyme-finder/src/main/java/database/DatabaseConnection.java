@@ -69,37 +69,46 @@ public class DatabaseConnection {
 //            System.out.println(e.getMessage());
 //        }
 //    }
-    public EnzymeList getEnzymesFromXML() {
+    public Document getDocument(String filepath){
         try {
-            File file = new File("src/main/java/database/defaultEnzymes.xml");
+            File file = new File(filepath);
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
                     .newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory
                     .newDocumentBuilder();
             Document document = documentBuilder.parse(file);
-            NodeList enzymes = document.getElementsByTagName("Enzyme");
-
-            EnzymeList list = new EnzymeList();
-
-            for (int i = 0; i < enzymes.getLength(); i++) {
-
-                String enzyme_text = enzymes.item(i).getTextContent();
-                Element fstElmnt = (Element) enzymes.item(i);
-                String enzyme_name = fstElmnt.getAttribute("name");
-                Enzyme enzyme = new Enzyme(enzyme_name, enzyme_text);
-//                System.out.println(enzyme.toString());
-//                System.out.println(enzyme_text);
-//                System.out.println(enzyme_name);
-                list.addEnzyme(enzyme);
-            }
-
-            return list;
-
+            
+            
+            return document;
+            
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
-
+        
         return null;
+        
+    }
+    public EnzymeList getEnzymesFromXML() {
+        
+        Document document = getDocument("src/main/java/database/defaultEnzymes.xml");
+        NodeList enzymes = document.getElementsByTagName("Enzyme");
+
+        EnzymeList list = new EnzymeList();
+
+        for (int i = 0; i < enzymes.getLength(); i++) {
+
+            String enzyme_text = enzymes.item(i).getTextContent();
+            Element fstElmnt = (Element) enzymes.item(i);
+            String enzyme_name = fstElmnt.getAttribute("name");
+            Enzyme enzyme = new Enzyme(enzyme_name, enzyme_text);
+//                System.out.println(enzyme.toString());
+//                System.out.println(enzyme_text);
+//                System.out.println(enzyme_name);
+            list.addEnzyme(enzyme);
+        }
+        
+        return list;
+
     }
 
 //    public void setDefaultEnzymes(){
