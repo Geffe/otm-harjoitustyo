@@ -14,4 +14,5 @@
 | 24.4. | 2    | Käyttöliittymän eriyttämistä, testikattavuusraportti, checkstyle ja README.md päivitys | 
 | 29.4. | 1    | Tiedoston/sekvenssin luku |
 | 2.5.  | 1    | Vähän koodin putsaamista ja checkstyle |
-| yht   | 30   |
+| 6.5.  | 3    | Tiedoston lukemisen korjaus, lisää testejä |
+| yht   | 33   |
