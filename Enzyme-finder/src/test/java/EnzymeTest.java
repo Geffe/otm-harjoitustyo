@@ -30,8 +30,10 @@ public class EnzymeTest {
     
     @Test
     public void toStringWorks(){
-        assertEquals("BamHI GGATCC", enzyme.getName()+" "+enzyme.getSequence());
+        assertEquals("BamHI GGATCC", enzyme.toString());
     }
+    
+    
     
     
 }

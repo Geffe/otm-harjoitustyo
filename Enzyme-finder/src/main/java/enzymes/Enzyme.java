@@ -4,8 +4,8 @@ package enzymes;
 
 public class Enzyme {
     
-    private String name;
-    private String sequence;
+    private final String name;
+    private final String sequence;
     
     public Enzyme(String name, String sequence) {
         this.name = name;

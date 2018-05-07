@@ -54,6 +54,15 @@ public class EnzymeListTest {
     }
     
     @Test
+    public void getEnzyme(){
+        Enzyme enzyme = new Enzyme("BamHI","GGATCC");
+        list.addEnzyme(enzyme);
+        assertEquals(enzyme,list.getEnzyme("GGATCC"));
+        assertEquals(enzyme,list.getEnzyme("BamHI"));
+        assertEquals(null,list.getEnzyme("XX"));
+    }
+    
+    @Test
     public void getEnzymes(){
         ArrayList<Enzyme> enzymes = new ArrayList();
         enzymes.add(new Enzyme("BamHI","GGATCC"));

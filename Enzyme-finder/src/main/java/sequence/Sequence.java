@@ -1,22 +1,19 @@
 package sequence;
 
-import database.DatabaseConnection;
+
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.w3c.dom.Document;
+
 
 public class Sequence {
 
     private String sequence;
 
     public Sequence() {
-        this.sequence = "";
+        
     }
 
     public Sequence(String sequence) {
@@ -45,15 +42,15 @@ public class Sequence {
     }
 
     public boolean fromFile(String string) {
-
+        //muuta tää
         if (string.contains(".xml") || true) {
             try {
                 String text = readFile(string, StandardCharsets.UTF_8);
                 System.out.println(text);
-                return fromString(text); //tässsä kohtaa ongelma
+                return fromString(text);
 
             } catch (IOException ex) {
-                Logger.getLogger(Sequence.class.getName()).log(Level.SEVERE, null, ex);
+                //Logger.getLogger(Sequence.class.getName()).log(Level.SEVERE, null, ex);
                 return false;
             }
         }

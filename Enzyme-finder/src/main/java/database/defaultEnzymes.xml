@@ -3,11 +3,15 @@
 These are default enzymes for splitting enzymes
 -->
 <Enzymes>
-    <Enzyme name="EcoRI">GAATTC</Enzyme>
+    <Enzyme name="AatII">GACGTC</Enzyme>
     <Enzyme name="ApaLI">GTGCAC</Enzyme>
     <Enzyme name="BamHI">GGATCC</Enzyme>
     <Enzyme name="HindIII">AAGCTT</Enzyme>
     <Enzyme name="EcoRI">GAATTC</Enzyme>
     <Enzyme name="NarI">GGCGCC</Enzyme>
+    <Enzyme name="MscI">TGGCCA</Enzyme>
+    <Enzyme name="NruI">TCGCGA</Enzyme>
+    <Enzyme name="PvuII">CAGCTG</Enzyme>
+    <Enzyme name="XhoI">CTCGAG</Enzyme>
     
 </Enzymes>
