@@ -1,6 +1,6 @@
 
 
-import com.mycompany.enzyme.finder.Enzyme;
+import enzymes.Enzyme;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -1,4 +1,4 @@
-package com.mycompany.enzyme.finder;
+package enzymes;
 
 import java.util.ArrayList;
 

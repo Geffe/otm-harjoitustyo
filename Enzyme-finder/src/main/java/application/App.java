@@ -1,8 +1,8 @@
 package application;
 
-import com.mycompany.enzyme.finder.EnzymeList;
-import com.mycompany.enzyme.finder.Sequence;
-import com.mycompany.enzyme.finder.SequenceSplitter;
+import enzymes.EnzymeList;
+import sequence.Sequence;
+import sequence.SequenceSplitter;
 import database.DatabaseConnection;
 import java.util.Scanner;
 import ui.Ui;
@@ -15,10 +15,7 @@ public class App {
 
         Ui ui = new Ui(new Scanner(System.in));
 
-//        foobar.createNewDatabase("test2.db");
-//        EnzymeList enzymes = new EnzymeList();
-//        enzymes.addEnzyme(new Enzyme("EcoRI", "GAATTC"));
-//        enzymes.addEnzyme(new Enzyme("BamHI", "GGATCC"));
+
         Sequence input = ui.getSequence();
         ui.listEnzymes(enzymes);
 

@@ -1,5 +1,5 @@
 
-package com.mycompany.enzyme.finder;
+package enzymes;
 
 
 public class Enzyme {

@@ -1,5 +1,6 @@
-package com.mycompany.enzyme.finder;
+package sequence;
 
+import enzymes.EnzymeList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

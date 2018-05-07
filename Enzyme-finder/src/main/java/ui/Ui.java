@@ -2,8 +2,8 @@
 package ui;
 
 
-import com.mycompany.enzyme.finder.EnzymeList;
-import com.mycompany.enzyme.finder.Sequence;
+import enzymes.EnzymeList;
+import sequence.Sequence;
 import java.util.Scanner;
 
 public class Ui {
@@ -19,20 +19,20 @@ public class Ui {
         //sekvenssi on asetettu vielä valmiiksi kokeilun helpottamiseksi
         System.out.println("Syötä sekvenssi tai tiedostopolku");
         syote = this.lukija.nextLine();
-        Sequence input = new Sequence();
+        Sequence sequnece = new Sequence();
 
         //tiedoston luku keskeneräinen, sekvenssin luku onnistuu
         while (true) {
             // Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
             //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
-            if (input.fromFile(syote)) {
-                System.out.println(input.getSequence());
-                return input;
-            } else if (input.fromString(syote)) {
-                System.out.println(input.getSequence());
-                return input;
+            if (sequnece.fromFile(syote)) {
+                System.out.println(sequnece.getSequence());
+                return sequnece;
+            } else if (sequnece.fromString(syote)) {
+                System.out.println(sequnece.getSequence());
+                return sequnece;
             } else {
-                System.out.println("Anna parempi sy!");
+                System.out.println("Anna parempi syote!");
                 syote = this.lukija.nextLine();
 
             }

@@ -1,7 +1,7 @@
 
-import com.mycompany.enzyme.finder.Enzyme;
-import com.mycompany.enzyme.finder.EnzymeList;
-import com.mycompany.enzyme.finder.SequenceSplitter;
+import enzymes.Enzyme;
+import enzymes.EnzymeList;
+import sequence.SequenceSplitter;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

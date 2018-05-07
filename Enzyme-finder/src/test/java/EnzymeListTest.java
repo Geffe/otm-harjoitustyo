@@ -1,7 +1,7 @@
 
 
-import com.mycompany.enzyme.finder.Enzyme;
-import com.mycompany.enzyme.finder.EnzymeList;
+import enzymes.Enzyme;
+import enzymes.EnzymeList;
 import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;

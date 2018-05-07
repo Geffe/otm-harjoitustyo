@@ -1,6 +1,6 @@
 
 
-import com.mycompany.enzyme.finder.Sequence;
+import sequence.Sequence;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
