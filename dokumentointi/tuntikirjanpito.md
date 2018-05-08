@@ -16,4 +16,5 @@
 | 2.5.  | 1    | Vähän koodin putsaamista ja checkstyle |
 | 6.5.  | 3    | Tiedoston lukemisen korjaus, lisää testejä |
 | 7.5.  | 2    | Lähes loput testit |
-| yht   | 35   |
+| 8.5.  | 3    | Javadoc ja koodin siistimistä |
+| yht   | 38   |
