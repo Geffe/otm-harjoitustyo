@@ -20,9 +20,6 @@ public class SequenceSplitter {
     private String sequence;
 
     public SequenceSplitter(EnzymeList list) {
-//        this.regex = "(GGATCC)|(GAATTC)";
-
-//        this.list = list.getEnzymes();
         this.list = list;
         this.regex = regexBuilder();
         this.sequence = "";
@@ -55,15 +52,6 @@ public class SequenceSplitter {
         final Matcher matcher = pattern.matcher(originalSequence);
 
         while (matcher.find()) {
-//            System.out.println("Full match: " + matcher.group(0));
-//            for (int i = 1; i <= matcher.groupCount(); i++) {
-//                System.out.println("Group " + i + ": " + matcher.group(i));
-// 
-//            }
-
-//            System.out.println("Start index: " + matcher.start());
-//            System.out.println(" End index: " + matcher.end());
-//            System.out.println(" Found: " + matcher.group());
             this.sequence = this.sequence.replaceAll(matcher.group(),
                     "**" + list.getEnzyme(matcher.group()).getName() + "**");
         }

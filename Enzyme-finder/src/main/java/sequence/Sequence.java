@@ -1,13 +1,16 @@
 package sequence;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- * Luokka käsittelee kokonaista sekvenssiä,josta tarkoitus on etsiä haluttuja
+ * Luokka käsittelee kokonaista sekvenssiä, josta tarkoitus on etsiä haluttuja
  * entsyymejä.
  *
  */
@@ -21,6 +24,7 @@ public class Sequence {
 
     public Sequence(String sequence) {
         this.sequence = sequence;
+
     }
 
     /**
@@ -42,7 +46,7 @@ public class Sequence {
             this.sequence += syote;
         }
 
-        return !(this.sequence == null || this.sequence.equals(""));
+        return !(this.sequence.equals(""));
     }
 
     /**
@@ -67,21 +71,25 @@ public class Sequence {
      * parametri ei ole tiedostopolku tai tiedosto on tyhjä
      */
     public boolean fromFile(String path) {
-        //muuta tää
-        if (path.contains(".xml") || true) {
+
+        if (new File(path).isFile()) {
             try {
                 String text = readFile(path, StandardCharsets.UTF_8);
-                //System.out.println(text);
+
                 return fromString(text);
 
             } catch (IOException ex) {
-                //Logger.getLogger(Sequence.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Sequence.class.getName()).log(Level.FINE, null, ex);
                 return false;
             }
         }
 
         return false;
 
+    }
+
+    public boolean fromSyote(String syote) {
+        return (this.fromFile(syote) || this.fromString(syote));
     }
 
     public String getSequence() {
@@ -91,9 +99,4 @@ public class Sequence {
     public void setSequence(String sequence) {
         this.sequence = sequence;
     }
-
-    public void editSequence(String sequence) {
-        this.sequence += sequence;
-    }
-
 }

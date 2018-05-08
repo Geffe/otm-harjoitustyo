@@ -1,4 +1,4 @@
-package database;
+package enzymes;
 
 import enzymes.Enzyme;
 import enzymes.EnzymeList;
@@ -16,15 +16,12 @@ import org.w3c.dom.NodeList;
  * Luokan tarkoitus on lukea tiedostoja
  * 
  */
-public class DatabaseConnection {
-
-    private String url;
-
-    public DatabaseConnection() {
-        this.url = null;
+public class DefaultEnzymes {
+    public String defaultXmlFilePath = "src/main/java/enzymes/defaultEnzymes.xml";
+    public DefaultEnzymes() {
     }
 
-    public Document getDocument(String filepath) {
+    private Document getDocument(String filepath) {
         try {
             File file = new File(filepath);
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
@@ -44,7 +41,10 @@ public class DatabaseConnection {
 
     public EnzymeList getEnzymesFromXML() {
 
-        Document document = getDocument("src/main/java/database/defaultEnzymes.xml");
+        Document document = getDocument(defaultXmlFilePath);
+        if(document == null){
+            return null;
+        }
         NodeList enzymes = document.getElementsByTagName("Enzyme");
 
         EnzymeList list = new EnzymeList();
