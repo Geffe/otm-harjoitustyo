@@ -1,6 +1,4 @@
-
 package ui;
-
 
 import enzymes.EnzymeList;
 import sequence.Sequence;
@@ -8,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Käyttöliittymä
- * 
+ *
  */
 public class Ui {
 
@@ -19,35 +17,29 @@ public class Ui {
     }
 
     public Sequence getSequence() {
-        String syote;
-        //sekvenssi on asetettu vielä valmiiksi kokeilun helpottamiseksi
-        System.out.println("Syötä sekvenssi tai tiedostopolku");
-        syote = this.lukija.nextLine();
-        Sequence sequnece = new Sequence();
 
-        //tiedoston luku keskeneräinen, sekvenssin luku onnistuu
+        System.out.println("Syötä sekvenssi tai tiedostopolku");
+        String syote = this.lukija.nextLine();
+        Sequence sequence = new Sequence();
+
         while (true) {
-            // Sequence input = new Sequence("ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGATGTGCAC");
-            //                                 -EcoRI-     -EcoRI-         -BamHI-      -EcoRI-   -ApaLI-
-            if (sequnece.fromFile(syote)) {
-                System.out.println(sequnece.getSequence());
-                return sequnece;
-            } else if (sequnece.fromString(syote)) {
-                System.out.println(sequnece.getSequence());
-                return sequnece;
+
+            if (sequence.fromFile(syote) || sequence.fromString(syote)) {
+                //System.out.println(sequence.getSequence());
+                return sequence;
+
             } else {
-                System.out.println("Anna parempi syote!");
+                System.out.println("Syötettä ei voida lukea, anna uusi");
                 syote = this.lukija.nextLine();
 
             }
-                   
-        
         }
     }
 
     public void listEnzymes(EnzymeList list) {
         System.out.println("Entsyymit: ");
         System.out.println(list);
+        System.out.println("");
     }
 
     public EnzymeList getSplittingEnzymes(EnzymeList enzymes) {
@@ -55,20 +47,17 @@ public class Ui {
         EnzymeList valitut = new EnzymeList();
 
         while (true) {
-            //kokeilun helpottamiseksi asetettu näin vielä
-            System.out.println("Syötä halutun entsyymin nimi tai lopeta");
+           
+            System.out.println("Syötä etsittävän entsyymin nimi tai x");
             String syote = this.lukija.nextLine();
 
-            if (syote.equals("lopeta")) {
+            if (syote.equals("x")) {
+                System.out.println("");
                 break;
             } else if (enzymes.searchName(syote)) {
                 valitut.addEnzyme(enzymes.getEnzyme(syote));
-            } else if (syote.isEmpty() && valitut.getEnzymes().isEmpty()) {
-                valitut.addEnzyme(enzymes.getEnzyme("BamHI"));
-                System.out.println("Käytetään oletusentsyymiä BamHI");
-                break;
-            } else {
-                System.out.println("Käytä parempia arvoja tyhmä!");
+            }  else {
+                System.out.println("Syötettä ei voitu valita");
             }
         }
         return valitut;

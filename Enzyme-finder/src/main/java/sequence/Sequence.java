@@ -1,6 +1,5 @@
 package sequence;
 
-
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -8,22 +7,29 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Luokka käsittelee kokonaista sekvenssiä,josta tarkoitus on
- * etsiä haluttuja entsyymejä.
- * 
+ * Luokka käsittelee kokonaista sekvenssiä,josta tarkoitus on etsiä haluttuja
+ * entsyymejä.
+ *
  */
 public class Sequence {
 
     private String sequence;
 
     public Sequence() {
-        
+
     }
 
     public Sequence(String sequence) {
         this.sequence = sequence;
     }
 
+    /**
+     * Metodi luo annetusta tekstistä sekvenssin
+     *
+     * @param originalInput sisältää tekstiä, jossa voi olla muutakin kuin
+     * puhdas sekvenssi
+     * @return true jos sekvenssi ei ole tyhjä ja false, jos on tyhjä
+     */
     public boolean fromString(String originalInput) {
 
         String[] lines = originalInput.split("\n");
@@ -39,18 +45,33 @@ public class Sequence {
         return !(this.sequence == null || this.sequence.equals(""));
     }
 
+    /**
+     * Metodi muodostaa tiedoston sisällöstä String-olion
+     *
+     * @param path tiedostosijainti
+     * @param encoding StandardCharsets.UTF_8
+     * @return String- muttujan, jossa on tiedoston sisältö
+     * @throws IOException jos tiedoston lukeminen epäonnistuu
+     */
     private String readFile(String path, Charset encoding)
             throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, encoding);
     }
 
-    public boolean fromFile(String string) {
+    /**
+     * Metodi tarkastelee, onko annettu syöte tiedosto vai sekvenssi
+     *
+     * @param path tiedostopolku tai puhdas sekvenssi
+     * @return true jos parametri on toimiva tiedostopolku ja false jos
+     * parametri ei ole tiedostopolku tai tiedosto on tyhjä
+     */
+    public boolean fromFile(String path) {
         //muuta tää
-        if (string.contains(".xml") || true) {
+        if (path.contains(".xml") || true) {
             try {
-                String text = readFile(string, StandardCharsets.UTF_8);
-                System.out.println(text);
+                String text = readFile(path, StandardCharsets.UTF_8);
+                //System.out.println(text);
                 return fromString(text);
 
             } catch (IOException ex) {

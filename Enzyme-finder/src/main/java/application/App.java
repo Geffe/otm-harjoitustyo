@@ -10,18 +10,18 @@ import ui.Ui;
 public class App {
 
     public void run() {
-        DatabaseConnection foobar = new DatabaseConnection();
-        EnzymeList enzymes = foobar.getEnzymesFromXML();
+        DatabaseConnection conn = new DatabaseConnection();
+        EnzymeList enzymes = conn.getEnzymesFromXML();
 
         Ui ui = new Ui(new Scanner(System.in));
 
         Sequence input = ui.getSequence();
         ui.listEnzymes(enzymes);
 
-        EnzymeList valitut = ui.getSplittingEnzymes(enzymes);
+        EnzymeList selectedEnzymes = ui.getSplittingEnzymes(enzymes);
 
         ui.printResult(input.getSequence());
-        SequenceSplitter splitter = new SequenceSplitter(valitut);
+        SequenceSplitter splitter = new SequenceSplitter(selectedEnzymes);
         splitter.setSequence(input.getSequence());
         String splitted_text = splitter.split(input.getSequence());
         ui.printResult(splitted_text);

@@ -16,7 +16,6 @@ public class SequenceSplitter {
         3. splittaa annettu sequence
      */
     final String regex;
-//    final ArrayList<Enzyme> list;
     final EnzymeList list;
     private String sequence;
 
@@ -28,22 +27,32 @@ public class SequenceSplitter {
         this.regex = regexBuilder();
         this.sequence = "";
     }
-
+    /**
+     * Metodi luo entsyymi-listn perusteella regex-muuttujan, joka
+     * etsii sekvenssistä annetun listan entsyymit
+     * @return regexString muodostettuna entsyymien mukaan
+     */
     public String regexBuilder() {
-        String string = "";
+        String regexString = "";
         for (int i = 0; i < list.getEnzymes().size(); i++) {
-            string += "(" + list.getEnzymes().get(i).getSequence() + ")";
+            regexString += "(" + list.getEnzymes().get(i).getSequence() + ")";
             if (!(i + 1 == list.getEnzymes().size())) {
-                string += "|";
+                regexString += "|";
             }
         }
-        return string;
+        return regexString;
     }
-
-    public String split(String string) {
+    
+    /**
+     * Metodi etsii halutusta sekvenssistä halutut entsyymit ja korvaa
+     * sekvenssistä löytyvät enstsyymien sekvenssit entsyymien nimillä
+     * @param originalSequence sekvenssi, josta etsitään entsyymit
+     * @return sequence muokattu sekvenssi
+     */
+    public String split(String originalSequence) {
 
         final Pattern pattern = Pattern.compile(regex);
-        final Matcher matcher = pattern.matcher(string);
+        final Matcher matcher = pattern.matcher(originalSequence);
 
         while (matcher.find()) {
 //            System.out.println("Full match: " + matcher.group(0));
@@ -58,7 +67,7 @@ public class SequenceSplitter {
             this.sequence = this.sequence.replaceAll(matcher.group(),
                     "**" + list.getEnzyme(matcher.group()).getName() + "**");
         }
-        // System.out.println(this.sequence);
+      
         return this.sequence;
 
     }
