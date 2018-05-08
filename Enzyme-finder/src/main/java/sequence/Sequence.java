@@ -7,7 +7,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-
+/**
+ * Luokka käsittelee kokonaista sekvenssiä,josta tarkoitus on
+ * etsiä haluttuja entsyymejä.
+ * 
+ */
 public class Sequence {
 
     private String sequence;

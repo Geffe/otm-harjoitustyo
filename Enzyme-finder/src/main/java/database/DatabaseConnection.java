@@ -3,22 +3,19 @@ package database;
 import enzymes.Enzyme;
 import enzymes.EnzymeList;
 import java.io.IOException;
-
-
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.xml.sax.SAXException;
-
 import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-
+/**
+ * Luokan tarkoitus on lukea tiedostoja
+ * 
+ */
 public class DatabaseConnection {
 
     private String url;

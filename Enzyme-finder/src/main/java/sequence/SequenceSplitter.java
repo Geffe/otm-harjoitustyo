@@ -4,6 +4,10 @@ import enzymes.EnzymeList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Luokka muokkaa sekvenssiä ja etsii siitä entsyymien kohdat
+ * 
+ */
 public class SequenceSplitter {
 
     /*
@@ -67,9 +71,4 @@ public class SequenceSplitter {
         return this.sequence;
     }
 
-    public void editSequence() {
-//        this.sequence = this.sequence.replaceAll(regex, "---");
-//        System.out.println(this.sequence);
-
-    }
 }

@@ -2,6 +2,10 @@ package enzymes;
 
 import java.util.ArrayList;
 
+/**
+ * Luokka käsittelee entsyymi-listoja
+ * 
+ */
 public class EnzymeList {
 
     private ArrayList<Enzyme> enzymes;

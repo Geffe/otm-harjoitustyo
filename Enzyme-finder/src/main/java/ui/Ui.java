@@ -6,9 +6,13 @@ import enzymes.EnzymeList;
 import sequence.Sequence;
 import java.util.Scanner;
 
+/**
+ * Käyttöliittymä
+ * 
+ */
 public class Ui {
 
-    private Scanner lukija;
+    private final Scanner lukija;
 
     public Ui(Scanner lukija) {
         this.lukija = lukija;

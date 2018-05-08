@@ -1,7 +1,10 @@
 
 package enzymes;
 
-
+/**
+ * Luokka käsittelee yksittäisiä entsyymejä
+ * 
+ */
 public class Enzyme {
     
     private final String name;
