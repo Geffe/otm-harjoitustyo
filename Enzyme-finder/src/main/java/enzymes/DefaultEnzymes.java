@@ -1,7 +1,5 @@
 package enzymes;
 
-import enzymes.Enzyme;
-import enzymes.EnzymeList;
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
@@ -13,14 +11,20 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 /**
- * Luokan tarkoitus on lukea tiedostoja
- * 
+ * Luokan tarkoitus on lukea tiedostoja.
+ *
  */
 public class DefaultEnzymes {
-    public String defaultXmlFilePath = "src/main/java/enzymes/defaultEnzymes.xml";
+
+    private final String defaultXmlFilePath = "src/main/java/enzymes/defaultEnzymes.xml";
+
     public DefaultEnzymes() {
+        
     }
 
+    /*
+    Metodi palauttaa document-olion, jos tiedostopolku ja tiedosto ovat toimivia.
+    */
     private Document getDocument(String filepath) {
         try {
             File file = new File(filepath);
@@ -36,33 +40,30 @@ public class DefaultEnzymes {
         }
 
         return null;
-
     }
 
+    /**
+     * Metodi hakee xml-tiedostosta kaikki ohjelman käytössä olevat entsyymit.
+     * @return listan entsyymeistä
+     */
     public EnzymeList getEnzymesFromXML() {
-
+        
         Document document = getDocument(defaultXmlFilePath);
-        if(document == null){
+        if (document == null) {
             return null;
         }
         NodeList enzymes = document.getElementsByTagName("Enzyme");
-
         EnzymeList list = new EnzymeList();
 
         for (int i = 0; i < enzymes.getLength(); i++) {
 
-            String enzyme_text = enzymes.item(i).getTextContent();
+            String enzymeText = enzymes.item(i).getTextContent();
             Element fstElmnt = (Element) enzymes.item(i);
-            String enzyme_name = fstElmnt.getAttribute("name");
-            Enzyme enzyme = new Enzyme(enzyme_name, enzyme_text);
-//                System.out.println(enzyme.toString());
-//                System.out.println(enzyme_text);
-//                System.out.println(enzyme_name);
+            String enzymeName = fstElmnt.getAttribute("name");
+            Enzyme enzyme = new Enzyme(enzymeName, enzymeText);
             list.addEnzyme(enzyme);
         }
 
         return list;
-
     }
-
 }

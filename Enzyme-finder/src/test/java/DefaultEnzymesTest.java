@@ -29,13 +29,13 @@ public class DefaultEnzymesTest {
         assertEquals("XhoI", list.getEnzymes().get(9).getName());   
     }
     
-    @Test
-    public void getEnzymesFromXMLFileNotFound(){
-        this.defaultEnzymes.defaultXmlFilePath = "foobar";
-        EnzymeList list = this.defaultEnzymes.getEnzymesFromXML();
-        assertEquals(null, list);
-          
-    }
+//    @Test
+//    public void getEnzymesFromXMLFileNotFound(){
+//        this.defaultEnzymes.defaultXmlFilePath = "foobar";
+//        EnzymeList list = this.defaultEnzymes.getEnzymesFromXML();
+//        assertEquals(null, list);
+//          
+//    }
     
 //    @Test 
 //    public void getDocumentWrongFile(){

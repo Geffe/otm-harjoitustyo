@@ -37,9 +37,7 @@ public class SequenceSplitterTest {
     @Test
     public void split(){
         splitter.setSequence("CTAGGATCCTCGGAATTCCT");
-        splitter.split("CTAGGATCCTCGGAATTCCT");
-        assertEquals("CTA**BamHI**TCG**EcoRI**CT", splitter.getSequence());
+        assertEquals("CTA**BamHI**TCG**EcoRI**CT", 
+                splitter.split("CTAGGATCCTCGGAATTCCT"));
     }
-    
-
 }

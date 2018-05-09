@@ -2,7 +2,7 @@
 package enzymes;
 
 /**
- * Luokka käsittelee yksittäisiä entsyymejä
+ * Luokka käsittelee yksittäisiä entsyymejä.
  * 
  */
 public class Enzyme {

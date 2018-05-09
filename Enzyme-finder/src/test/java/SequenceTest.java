@@ -46,7 +46,7 @@ public class SequenceTest {
     @Test
     public void fromFile() {
         assertFalse(sequence.fromFile("ACTGACTAG"));
-        assertTrue(sequence.fromFile("src/test/java/example_sequence.txt"));
+        assertTrue(sequence.fromFile("src/main/java/ui/example_sequence.txt"));
         
      
     }
@@ -67,7 +67,7 @@ public class SequenceTest {
     @Test
     public void fromSyote() {
         assertTrue(sequence.fromSyote("ACTGACTAG"));
-        assertTrue(sequence.fromSyote("src/test/java/example_sequence.txt"));
+        assertTrue(sequence.fromSyote("src/main/java/ui/example_sequence.txt"));
         assertTrue(sequence.fromSyote("ijnubygv"));
     }
 

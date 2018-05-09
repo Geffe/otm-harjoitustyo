@@ -28,11 +28,11 @@ public class Sequence {
     }
 
     /**
-     * Metodi luo annetusta tekstistä sekvenssin
+     * Metodi luo annetusta tekstistä sekvenssin.
      *
      * @param originalInput sisältää tekstiä, jossa voi olla muutakin kuin
      * puhdas sekvenssi
-     * @return true jos sekvenssi ei ole tyhjä ja false, jos on tyhjä
+     * @return true jos sekvenssi ei ole tyhjä ja muuten false
      */
     public boolean fromString(String originalInput) {
 
@@ -49,8 +49,8 @@ public class Sequence {
         return !(this.sequence.equals(""));
     }
 
-    /**
-     * Metodi muodostaa tiedoston sisällöstä String-olion
+    /*
+     * Metodi muodostaa tiedoston sisällöstä String-olion.
      *
      * @param path tiedostosijainti
      * @param encoding StandardCharsets.UTF_8
@@ -64,7 +64,7 @@ public class Sequence {
     }
 
     /**
-     * Metodi tarkastelee, onko annettu syöte tiedosto vai sekvenssi
+     * Metodi tarkastelee, onko annettu syöte tiedosto vai sekvenssi.
      *
      * @param path tiedostopolku tai puhdas sekvenssi
      * @return true jos parametri on toimiva tiedostopolku ja false jos
@@ -83,19 +83,31 @@ public class Sequence {
                 return false;
             }
         }
-
         return false;
-
     }
 
+    /**
+     * Metodi tutkii syötteen toimivuutta.
+     * @param syote string
+     * @return true, jos parametri on toimiva tiedostopolku tai 
+     * jokin muu kuin tyhjä string, muuten false
+     */
     public boolean fromSyote(String syote) {
         return (this.fromFile(syote) || this.fromString(syote));
     }
 
+    /**
+     * Metodi palauttaa sekvenssin.
+     * @return Sequence sekvenssi
+     */
     public String getSequence() {
         return sequence;
     }
 
+    /**
+     * Metodi asettaa skvenssille string-muuttujan.
+     * @param sequence 
+     */
     public void setSequence(String sequence) {
         this.sequence = sequence;
     }

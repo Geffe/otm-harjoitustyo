@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Luokka muokkaa sekvenssiä ja etsii siitä entsyymien kohdat
+ * Luokka muokkaa sekvenssiä ja etsii siitä entsyymien kohdat.
  * 
  */
 public class SequenceSplitter {
@@ -15,14 +15,14 @@ public class SequenceSplitter {
         2. rakenna regexp niiden perusteella
         3. splittaa annettu sequence
      */
-    final String regex;
-    final EnzymeList list;
+    private final String regex;
+    private final EnzymeList list;
     private String sequence;
 
     public SequenceSplitter(EnzymeList list) {
         this.list = list;
-        this.regex = regexBuilder();
         this.sequence = "";
+        this.regex = regexBuilder();
     }
     /**
      * Metodi luo entsyymi-listn perusteella regex-muuttujan, joka
@@ -60,12 +60,16 @@ public class SequenceSplitter {
 
     }
 
+    /**
+     * Metodi asettaa luokassa muokattavan sekvenssin.
+     * @param sequence 
+     */
     public void setSequence(String sequence) {
         this.sequence = sequence;
     }
 
-    public String getSequence() {
-        return this.sequence;
-    }
+//    public String getSequence() {
+//        return this.sequence;
+//    }
 
 }

@@ -44,6 +44,11 @@ public class Ui {
 
     }
 
+    /**
+     * Jos annettua syötettä ei pystytty lukemaan, kysyy uudestaan
+     * tiedostopolkua tai sekvenssiä
+     * @return syöte
+     */
     public String reAskSequenceOrPath() {
 
         System.out.println("Syötettä ei voida lukea, anna uusi");
