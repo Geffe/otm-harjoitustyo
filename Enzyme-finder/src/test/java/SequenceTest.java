@@ -65,10 +65,11 @@ public class SequenceTest {
     }
     
     @Test
-    public void fromSyote() {
-        assertTrue(sequence.fromSyote("ACTGACTAG"));
-        assertTrue(sequence.fromSyote("src/main/java/ui/example_sequence.txt"));
-        assertTrue(sequence.fromSyote("ijnubygv"));
+    public void fromInput() {
+        assertTrue(sequence.fromInput("ACTGACTAG"));
+        assertTrue(sequence.fromInput("src/main/java/ui/example_sequence.txt"));
+        assertTrue(sequence.fromInput("ijnubygv"));
+        assertFalse(sequence.fromInput(""));
     }
 
 }

@@ -40,7 +40,7 @@ public class App {
     private void getSequence() {
         String syote = this.ui.askSequenceOrPath();
         this.originalSequence = new Sequence();
-        while (!originalSequence.fromSyote(syote)) {
+        while (!originalSequence.fromInput(syote)) {
             syote = this.ui.reAskSequenceOrPath();
         }
     }

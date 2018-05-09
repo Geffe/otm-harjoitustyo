@@ -19,6 +19,11 @@ public class SequenceSplitter {
     private final EnzymeList list;
     private String sequence;
 
+    /**
+     * Luokan ainoa konstruktori, joka saa parametrinä entsyymi-listan,
+     * joiden entsyymien mukaan sekvenssiä muokataan.
+     * @param list 
+     */
     public SequenceSplitter(EnzymeList list) {
         this.list = list;
         this.sequence = "";
@@ -26,7 +31,7 @@ public class SequenceSplitter {
     }
     /**
      * Metodi luo entsyymi-listn perusteella regex-muuttujan, joka
-     * etsii sekvenssistä annetun listan entsyymit
+     * etsii sekvenssistä annetun listan entsyymit.
      * @return regexString muodostettuna entsyymien mukaan
      */
     public String regexBuilder() {
@@ -42,7 +47,7 @@ public class SequenceSplitter {
     
     /**
      * Metodi etsii halutusta sekvenssistä halutut entsyymit ja korvaa
-     * sekvenssistä löytyvät enstsyymien sekvenssit entsyymien nimillä
+     * sekvenssistä löytyvät enstsyymien sekvenssit entsyymien nimillä.
      * @param originalSequence sekvenssi, josta etsitään entsyymit
      * @return sequence muokattu sekvenssi
      */

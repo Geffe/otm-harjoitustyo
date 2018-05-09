@@ -18,6 +18,9 @@ public class DefaultEnzymes {
 
     private final String defaultXmlFilePath = "src/main/java/enzymes/defaultEnzymes.xml";
 
+    /**
+     * Luokan ainoa konstruktori, joka on parametritön.
+     */
     public DefaultEnzymes() {
         
     }

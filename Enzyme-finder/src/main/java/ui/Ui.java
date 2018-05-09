@@ -9,36 +9,25 @@ import java.util.Scanner;
  */
 public class Ui {
 
-    private final Scanner lukija;
+    private final Scanner sc;
 
-    public Ui(Scanner lukija) {
-        this.lukija = lukija;
+    /**
+     * Luokan ainoa konstruktori, joka saa parametrinä Scanner-olion.
+     * @param sc lukee käyttäjän syötteet
+     */
+    public Ui(Scanner sc) {
+        this.sc = sc;
     }
 
-//    public Sequence getSequence() {
-//
-//        System.out.println("Syötä sekvenssi tai tiedostopolku");
-//        String syote = this.lukija.nextLine();
-//        System.out.println("");
-//        Sequence sequence = new Sequence();
-//
-//        while (true) {
-//
-//            if (sequence.fromFile(syote) || sequence.fromString(syote)) {
-//                //System.out.println(sequence.getSequence());
-//                return sequence;
-//
-//            } else {
-//                System.out.println("Syötettä ei voida lukea, anna uusi");
-//                syote = this.lukija.nextLine();
-//
-//            }
-//        }
-//    }
+
+    /**
+     * Metodi kysyy käyttäjältä tiedostopolkua tai sekvenssiä.
+     * @return käyttäjän syöte
+     */
     public String askSequenceOrPath() {
 
         System.out.println("Syötä sekvenssi tai tiedostopolku");
-        String syote = this.lukija.nextLine();
+        String syote = this.sc.nextLine();
         System.out.println("");
         return syote;
 
@@ -47,23 +36,32 @@ public class Ui {
     /**
      * Jos annettua syötettä ei pystytty lukemaan, kysyy uudestaan
      * tiedostopolkua tai sekvenssiä
-     * @return syöte
+     * @return käyttäjän syöte
      */
     public String reAskSequenceOrPath() {
 
         System.out.println("Syötettä ei voida lukea, anna uusi");
-        String syote = this.lukija.nextLine();
+        String syote = this.sc.nextLine();
         System.out.println("");
         return syote;
 
     }
 
+    /**
+     * Metodi tulostaa entsyymi-listan sisällön.
+     * @param list entsyymi-lista
+     */
     public void listEnzymes(EnzymeList list) {
         System.out.println("Entsyymit: ");
         System.out.println(list);
         System.out.println("");
     }
 
+    /**
+     * Metodi kysyy käyttäjältä entsyymejä, joiden kohtia sekvenssistä etsitään.
+     * @param enzymes valittavissa olevat entsyymit
+     * @return valitut entsyymit
+     */
     public EnzymeList getSplittingEnzymes(EnzymeList enzymes) {
 
         EnzymeList selectedEnzymes = new EnzymeList();
@@ -71,7 +69,7 @@ public class Ui {
         while (true) {
 
             System.out.println("Syötä etsittävän entsyymin nimi tai x");
-            String syote = this.lukija.nextLine();
+            String syote = this.sc.nextLine();
 
             if (syote.equals("x") && selectedEnzymes.amount() == 0) {
                 System.out.println("Mitään entsyymiä ei ole valittu");
@@ -87,6 +85,10 @@ public class Ui {
         return selectedEnzymes;
     }
 
+    /**
+     * Metodi tulostaa parametrinä saadun tekstin.
+     * @param text tulostettava teksti
+     */
     public void printResult(String text) {
         System.out.println(text);
         System.out.println("_________________________");
@@ -94,11 +96,15 @@ public class Ui {
 
     }
 
+    /**
+     * Metodi kysyy käyttäjältä, jatketaanko/lopetetaanko ohjelma.
+     * @return true, jos ohjelma halutaan lopettaa, muuten false
+     */
     public boolean quit() {
 
         while (true) {
             System.out.println("Syötä: jatka/lopeta");
-            String syote = this.lukija.nextLine();
+            String syote = this.sc.nextLine();
 
             if (syote.equals("jatka")) {
                 System.out.println("");

@@ -11,6 +11,10 @@ public class EnzymeList {
     private ArrayList<Enzyme> enzymes;
     private int amount;
 
+    /**
+     * Luokan ainoa konstruktori, joka on parametritön, mutta 
+     * alustaa muuttujat.
+     */
     public EnzymeList() {
         this.enzymes = new ArrayList();
         this.amount = 0;
@@ -59,7 +63,7 @@ public class EnzymeList {
 
     /**
      * Metodi etsii entsyymi-listasta nimen mukaan.
-     * @param enzymeName
+     * @param enzymeName entsyymin nimi
      * @return true, jos listasta löytyy parametrina annetun niminen entsyymi,
      * muuten false
      */
@@ -74,7 +78,7 @@ public class EnzymeList {
 
     /**
      * Metodi etsii entsyymi-listasta sekvenssin mukaan.
-     * @param enzymeSequence
+     * @param enzymeSequence entsyymin sekvenssi
      * @return true, jos listasta löytyy parametrina annetun sekvenssin omaava
      * entsyymi, muuten false
      */
@@ -89,13 +93,13 @@ public class EnzymeList {
 
     /**
      * Metodi etsii entsyymi-listasta syötteen mukaan entsyymin ja palauttaa sen.
-     * @param syote
+     * @param id entsyymin nimi tai sekvenssi
      * @return Enzyme
      */
-    public Enzyme getEnzyme(String syote) {
+    public Enzyme getEnzyme(String id) {
         for (int i = 0; i < enzymes.size(); i++) {
-            if ((enzymes.get(i).getName().equals(syote)) || 
-                    (enzymes.get(i).getSequence().equals(syote))) {
+            if ((enzymes.get(i).getName().equals(id)) || 
+                    (enzymes.get(i).getSequence().equals(id))) {
                 return enzymes.get(i);
             }
         }

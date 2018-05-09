@@ -18,10 +18,17 @@ public class Sequence {
 
     private String sequence;
 
+    /**
+     * Luokan konstruktori, joka on parametritön.
+     */
     public Sequence() {
 
     }
 
+    /**
+     * Luokan konstruktori, joka saa parametrin.
+     * @param sequence sekvenssi
+     */
     public Sequence(String sequence) {
         this.sequence = sequence;
 
@@ -45,7 +52,6 @@ public class Sequence {
             syote = syote.replaceAll("\\s", "");
             this.sequence += syote;
         }
-
         return !(this.sequence.equals(""));
     }
 
@@ -88,12 +94,12 @@ public class Sequence {
 
     /**
      * Metodi tutkii syötteen toimivuutta.
-     * @param syote string
+     * @param input string
      * @return true, jos parametri on toimiva tiedostopolku tai 
      * jokin muu kuin tyhjä string, muuten false
      */
-    public boolean fromSyote(String syote) {
-        return (this.fromFile(syote) || this.fromString(syote));
+    public boolean fromInput(String input) {
+        return (this.fromFile(input) || this.fromString(input));
     }
 
     /**
