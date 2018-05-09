@@ -17,4 +17,6 @@
 | 6.5.  | 3    | Tiedoston lukemisen korjaus, lisää testejä |
 | 7.5.  | 2    | Lähes loput testit |
 | 8.5.  | 3    | Javadoc ja koodin siistimistä |
-| yht   | 38   |
+| 8.5.  | 4    | Koodin siistimistä ja testejä |
+| 9.5.  | 2    | Javadoc ja koodin tarkistelua |
+| yht   | 44   |
