@@ -1,4 +1,4 @@
-# työaikakirjanpito
+# Työaikakirjanpito
 
 | päivä | aika | mitä tein  |
 | :----:|:-----| :-----|
@@ -19,4 +19,5 @@
 | 8.5.  | 3    | Javadoc ja koodin siistimistä |
 | 8.5.  | 4    | Koodin siistimistä ja testejä |
 | 9.5.  | 2    | Javadoc ja koodin tarkistelua |
-| yht   | 44   |
+| 9.5.  | 2    | Koodin viimeistelyä ja viimeiset testit, arkkitehtuurikuvauksen kirjoittamista |
+| yht   | 46   |
