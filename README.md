@@ -15,7 +15,7 @@ Sovellus on tarkoitettu DNA-sekvenssien analysointiin ja ohjelmalla pystyy etsim
 
 ## Releaset
 
-[viikko 7](https://github.com/Geffe/otm-harjoitustyo/releases)
+[palautus](https://github.com/Geffe/otm-harjoitustyo/releases/tag/palautus)
 
 ## Komentorivitoiminnot
 
