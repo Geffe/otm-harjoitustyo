@@ -20,4 +20,5 @@
 | 8.5.  | 4    | Koodin siistimistä ja testejä |
 | 9.5.  | 2    | Javadoc ja koodin tarkistelua |
 | 9.5.  | 2    | Koodin viimeistelyä ja viimeiset testit, arkkitehtuurikuvauksen kirjoittamista |
-| yht   | 46   |
+| 10.5. | 4    | Dokumenttien päivitys, sekvenssikaaviot ym. kaikki valmiiksi |
+| yht   | 50   |
