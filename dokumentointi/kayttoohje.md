@@ -19,5 +19,7 @@ Ohjelma kysyy käyttäjältä ensin DNA-sekvenssiä tai tiedostopolkua. Jos käy
 
 Kun syötteen lukeminen on onnistunut, ohjelma näyttää listan valittavista oletusentsyymeistä. 
 Ohjelma kysyy käyttäjältä käyttäjän haluamia entsyymien nimiä. Entsyymien valinnan voi lopettaa syötteellä "x". 
+
 Tämän jälken ohjelma tulostaa käyttäjän antaman sekvenssin entsyymeillä muokattuna. Käytännössä tämä tarkoittaa, että sekvenssistä löytyvät entsyymien kohdat on korvattu kyseisestä kohdasta entsyymin nimellä. 
+
 Ohjelma kysyy haluaako käyttäjä jatkaa vai lopettaa. Syöte "lopeta" lopettaa ohjelman. Syöte "jatka" palaa taas entsyymien valintaan, jolloin käyttäjä voi testata löytyykö sekvenssistä muita entsyymejä.
