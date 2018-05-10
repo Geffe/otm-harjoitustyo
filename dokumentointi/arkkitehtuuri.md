@@ -29,7 +29,7 @@ Yksinkertaistettuna:
 <img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S1defaultEnzymes.png" width="1000">
 
 ### Käyttöliittymän alku ja entsyymien valinta
-
+Noudattaa kulkua, jossa käyttäjä syöttää oikeita ja toimivia syötteitä.
 <img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S2k%C3%A4ytt%C3%B6liittym%C3%A4nAlku-valitutEntsyymit.png" width="900">
 
 ### Sekvenssin muokkaaminen entsyymien mukaan
@@ -37,10 +37,4 @@ Yksinkertaistettuna:
 <img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S3sekvenssinSplittaus.png" width="900">
 
 
-Alustava luokkakaavio: 
 
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/luokkakaavio.png" width="500">
-
-Alustava sekvenssikaavio:
-
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/sekvenssikaavio-Enzyme-f.png" width="700">
