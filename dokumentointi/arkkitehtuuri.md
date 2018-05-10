@@ -36,5 +36,15 @@ Noudattaa kulkua, jossa käyttäjä syöttää oikeita ja toimivia syötteitä.
 
 <img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S3sekvenssinSplittaus.png" width="900">
 
+### Muut toiminnallisuudet
+Ohjelma reagoi käyttäjän virheellisiin syötteisiin. Muokatun sekvenssin tulostuksen jälkeen ohjelma kysyy käyttäjältä, halutaanko jatkaa vai lopettaa ohjelma.
+
+## Ohjelman rakenteeseen jääneet heikkoudet
+Oletusentsyymit voisivat sijaita tietokannassa, mutta koska tieto niissä ei muutu, ajattelin xml-tiedoston olevan sopiva ratkaisu.
+Luokka DefaultEnzymes voisi sijaita omassa pakkauksessaan xml-tiedoston kanssa.
+Pakkaus _ui_ sisältää esimerkkitiedostoja, joita ei tietenkään oikeasti sovellusta käyttäessä tarvitse. 
+Jotkin metodit ovat hieman pitkiä, joten niitä voisi jakaa pienemmiksi metodeiksi. 
+Luokan App testaaminen osoittautui hankalaksi, joten rakenteen muokkaamisella luokan testaus voisi helpottua.
+
 
 
