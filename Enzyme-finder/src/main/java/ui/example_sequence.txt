@@ -1,7 +1,7 @@
 # hastag indicates comment
 # This sequence holds 
-#   - 3x GAATTC
-#   - 1x GGATCC
+#   - 3x GAATTC EcoRI
+#   - 1x GGATCC BamHI
 # Tested with regexp: ((GGATCC)|(GAATTC))
 
 ACTGGAATTCGCTACGGAATTCGATCGATCGAGGATCCCTGTGCAGAATTCCTGAT
