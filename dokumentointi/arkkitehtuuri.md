@@ -26,15 +26,15 @@ Kronologisessa järjestyksessä:
 ### Oletusentsyymien hakeminen tiedostosta
 Yksinkertaistettuna: 
 
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S1defaultEnzymes.png" width="500">
+<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S1defaultEnzymes.png" width="700">
 
 ### Käyttöliittymän alku ja entsyymien valinta
 
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S2k%C3%A4ytt%C3%B6liittym%C3%A4nAlku-valitutEntsyymit.png" width="500">
+<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S2k%C3%A4ytt%C3%B6liittym%C3%A4nAlku-valitutEntsyymit.png" width="700">
 
 ### Sekvenssin muokkaaminen entsyymien mukaan
 
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S3sekvenssinSplittaus.png" width="500">
+<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S3sekvenssinSplittaus.png" width="700">
 
 
 Alustava luokkakaavio: 
