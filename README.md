@@ -1,17 +1,21 @@
+# Enzyme-finder
+Sovellus on tarkoitettu DNA-sekvenssien analysointiin ja ohjelmalla pystyy etsimään annetusta sekvenssistä yleisimpien restriktioentsyymien katkaisukohdat. 
 
 ## Dokumentaatio
+[Käyttöohje](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
 
 [Vaatimusmäärittely](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
 [Arkkitehtuurikuvaus](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+[Testausdokumentti](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/testaus.md)
+
 [Työaikakirjanpito](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
-[Testikattavuusraportti](https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/testikattavuusraportti24.4.png)
 
 ## Releaset
 
-[viikko 5](https://github.com/Geffe/otm-harjoitustyo/releases)
+[viikko 7](https://github.com/Geffe/otm-harjoitustyo/releases)
 
 ## Komentorivitoiminnot
 
@@ -40,6 +44,13 @@ mvn package
 ```
 
 generoi hakemistoon _target_ suoritettavan jar-tiedoston _Enzyme-finder-1.0-SNAPSHOT.jar_
+
+### Javadoc
+JavaDoc generoidaan komennolla
+```
+mvn javadoc:javadoc
+```
+JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html
 
 ### Checkstyle
 
