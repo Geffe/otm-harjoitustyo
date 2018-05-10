@@ -26,7 +26,7 @@ Kronologisessa järjestyksessä:
 ### Oletusentsyymien hakeminen tiedostosta
 Yksinkertaistettuna: 
 
-<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S1defaultEnzymes.png" width="900">
+<img src="https://github.com/Geffe/otm-harjoitustyo/blob/master/dokumentointi/kuvat/S1defaultEnzymes.png" width="1000">
 
 ### Käyttöliittymän alku ja entsyymien valinta
 
